@@ -1,0 +1,16 @@
+{
+  "presets": [
+    // "@babel/react",
+    "@babel/typescript",
+    ["@babel/env", { "modules": "auto" }],
+    ["@babel/preset-react", { "runtime": "automatic" }]
+  ]
+    // "plugins": [
+    //   ["module-resolver", {
+    //     "root": ["./"],
+    //     "alias": {
+    //       "components": "./src/components"
+    //     }
+    //   }]
+    // ]
+}
