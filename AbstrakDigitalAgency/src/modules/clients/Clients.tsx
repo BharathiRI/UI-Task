@@ -47,6 +47,7 @@ export const Clients = () => {
           width= "60%"
           align="left"
           colors="#fff"
+          subColor="#fff"
           title="Top Clients"
           mainTitle="We’ve built solutions for..."
           subTitle="Design anything from simple icons to fully featured websites and applications."

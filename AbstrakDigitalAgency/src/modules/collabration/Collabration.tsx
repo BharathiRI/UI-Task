@@ -14,7 +14,15 @@ export const Collabration = () => {
           title="Let's work together"
           mainTitle="Need a successful project?"
          />
-        <Button type="button" size='23px 55px' color='Yes' buttonText='Estimate Project' />
+         <Button
+                size="23px 55px"
+                color="#0d6efd"
+                bgColor="#fff"
+                hoverBgColor='#ffdc60'
+                hoverColor='#fff'
+                border="none"
+                buttonText="Estimate Project"
+              />
         </Styled.CollabrationTop>
         <Styled.CollabrationBottom>
            <Styled.CollabrationImageList1>

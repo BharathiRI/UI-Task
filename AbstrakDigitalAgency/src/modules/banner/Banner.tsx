@@ -14,7 +14,16 @@ export const Banner = () => {
        <Styled.BannerContent>
        Create live segments and target the right people for messages based on their behaviors.
        </Styled.BannerContent>
-       <Button type="button" size='20px 35px' largeSize='28px 45px' color='Yes' buttonText='Get Started' />
+       <Button
+                size="20px 35px"
+                color="#fff"
+                bgColor="#5956e9"
+                hoverBgColor='#2522ba'
+                hoverColor='#fff'
+                border="none"
+                buttonText="Get Started"
+                largeSize='28px 45px' 
+              />
        </Styled.AnimatedBox1>
       </Styled.BannerLeft>
       <Styled.BannerRight>

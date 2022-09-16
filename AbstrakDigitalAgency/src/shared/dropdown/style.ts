@@ -1,88 +1,65 @@
 import styled from "styled-components";
 import { screenSizes } from "../../styles/theme";
 
-export const Dropdown = styled.ul`
+interface IProps{
+    view: string;
+}
+
+export const Dropdown = styled.ul<IProps>`
 list-style:none;
 display:flex;
+flex-direction: ${props=>props.view === "Mobile" ? "column" : "row"};
 align-items: flex-start;
+padding:0;
 `;
 
-export const DropdownList = styled.li`
+export const DropdownList = styled.li<IProps>`
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-evenly;
-margin: 0 11px;
+margin: 0 10px;
 transition: all .3s ease-in-out;
-width:120px;
+width:${props=>props.view === "Mobile" ? "95%" : "80px"};
+border-bottom: ${props=>props.view === "Mobile" ? "1px solid #dbdeff" : "none"};
+
 @media only screen and (min-width: ${screenSizes.XL}px)
 {
-    width:130px;
     margin: 0 23px;
 }
-
+:first-child{
+   width:${props=>props.view === "Mobile" ? "95%" : "130px"};
+}
 `;
 
-export const DropdownTextBox = styled.a`
+
+export const DropdownTextBox = styled.a<IProps>`
+    width:100%;
     font-weight: 500;
     font-size: 16px;
     color: #525260;
     display: flex;
     align-items: center;
-    :before{
-    content: "";
-    height: 2px;
-    width: 0;
-    background-color: #5956e9;
-    position: absolute;
-    bottom: 12px;
-    left: 0;
-    opacity: 0;
-    transition: .5s;
-    }
+    justify-content: ${props=>props.view === "Mobile" ? "space-between" : "flext-start"};
+    line-height: ${props=>props.view === "Mobile" ? "50px" : ""};
 
+    
     ${DropdownList}:hover &{
         color: #5956e9;
     }
     :hover{
-        text-decoration: underline #5956e9;
+        border-bottom-style:  ${props=>props.view === "Mobile" ? "none" : "solid"};
+        border-bottom-width:${props=>props.view === "Mobile" ? "none" : "1px"};
+        border-bottom-color: ${props=>props.view === "Mobile" ?"none" : "#5956e9"};
     }
 `;
 
 export const DropdownText = styled.p`
 margin: 0;
+margin-right: 5px;
 `;
 
-export const Image = styled.img`
-    margin-left: 2px;
-    font-size: 14px;
-`;
-
-export const DropdownSubMenu = styled.ul`
-    list-style:none;
-    background: #fff;
-    z-index: -1;
-    display:none;
-    opacity: 0;
-    visibility: hidden;
-    min-width: 250px;
-    padding: 15px 10px;
-    border-radius: 4px;
-    margin:0;
-    transition: all .3s ease-in-out;
-    box-shadow: 0 13px 48px 0 rgb(0 0 0 / 15%);
-    cursor: pointer;
-    ${DropdownList}:hover & {
-    opacity: 1;
-    display: block;
-    visibility: visible;
-    z-index: 9;
-    left: 0;
-    margin: 20px 0;
-    }
-`;
-
-export const DropdownSubMenuList = styled.li`
+export const DropdownSubMenuList = styled.li<IProps>`
     margin: 0;
     transition: all .3s ease-in-out;
     opacity: 0;
@@ -94,18 +71,61 @@ export const DropdownSubMenuList = styled.li`
     }
     
     :hover{
-        text-decoration: line-through 2px #5956e9;
-        color:#5956e9;
+        text-decoration: ${props=>props.view === "Mobile" ?"none" : "line-through 2px #5956e9"};
+    }
+`;
+
+export const DropdownSubMenu = styled.ul<IProps>`
+    list-style:none;
+    background: #fff;
+    z-index: -1;
+    display:none;
+    opacity: 0;
+    visibility: hidden;
+    min-width: ${props=>props.view === "Mobile" ? "100%" : "250px"}
+    border-radius: 4px;
+    transition: ${props=>props.view === "Mobile" ? "none 0s ease 0s" : "all .3s ease-in-out"};
+    cursor: pointer;
+    width: 200px;
+    padding:10px 15px;
+
+    ${DropdownList}:hover & {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    z-index: 9;
+    left: 0;
+    margin: 20px 0;
+    box-shadow: ${props=>props.view === "Mobile" ? "none" : "0 13px 48px 0 rgb(0 0 0 / 15%)" };
+    }
+
+    ${DropdownSubMenuList} {
+        opacity: 1;
+        transform: translateX(0);
     }
 `;
 
 export const DropdownSubText = styled.p`
     font-size: 14px;
     text-transform: capitalize;
-    color: #525260;
     font-weight: 500;
     padding: 7px 15px;
     border-radius: 4px;
     transition: all .3s ease-in-out;
     margin:0;
+
+    ${DropdownSubMenuList}:hover & {
+        color: #5956e9;
+    }
+    :after{
+    content: "";
+    height: 1px;
+    width: 0;
+    background-color: #5956e9;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+    }
 `

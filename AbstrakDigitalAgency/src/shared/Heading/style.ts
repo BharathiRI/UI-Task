@@ -10,8 +10,12 @@ interface IColorProps{
     colors: string
 }
 
+interface ISubColor{
+    subColor: string
+}
+
 export const HeadingBody = styled.div<Iprops>`
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: ${props=>props.align};
     @media (min-width: ${screenSizes.M}px) {
         width: ${props=>props.width ? props.width : ''};
@@ -51,9 +55,10 @@ color: ${props=>props.colors};
 export const SubTitleBox = styled.div`
 `;
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.p<ISubColor>`
 font-size: ${fontSizes.XS};
-color: #525260;
+color: ${props=>props.subColor ? props.subColor : "#525260"};
+opacity: ${props=>props.subColor ? "0.6" : "1"};
 @media (min-width: ${screenSizes.M}px) {
     font-size: ${fontSizes.S};
     margin: 0 auto 40px;

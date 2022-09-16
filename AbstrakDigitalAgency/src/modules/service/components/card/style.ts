@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { gapSizes, screenSizes } from '../../../../styles/theme'
 
-
+export const CardContentText = styled.p`
+ opacity: 0.5;
+`
+export const CardLinkText = styled.p`
+    font-weight: 500;
+`
 export const ServiceCard = styled.div`
  padding: 40px 25px;
  display: grid;
@@ -16,6 +21,13 @@ export const ServiceCard = styled.div`
  :hover{
     background: linear-gradient(180deg,#27272e,#303035);
     border-image-source: linear-gradient(0deg,#27272e 64.45%,rgba(74,75,86,.72));
+
+    ${CardContentText}{
+        opacity:1;
+    }
+    ${CardLinkText}{
+        color:#fab8c4;
+    }
  }
 
 @media (max-width: ${screenSizes.M}){
@@ -43,12 +55,6 @@ span {
 }
 `;
 
-export const CardLinkText = styled.p`
-    font-weight: 500;
-`
-export const CardContentText = styled.p`
- opacity: 0.5;
-`
 export const CardTitleText = styled.h5`
  color: #fff;
 `

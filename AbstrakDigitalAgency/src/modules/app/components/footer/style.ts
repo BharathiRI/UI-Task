@@ -6,13 +6,13 @@ background-color: #fff;
 `
 
 export const FooterBody = styled.div`
-padding: 60px 20px 0;
+padding: 60px 15px 0;
 max-width: 540px;
 margin: 100px auto 0;
  @media only screen and (min-width: ${screenSizes.S}px)
  {
     margin: 200px auto 0;
-    padding: 80px 35px 0;  
+    padding: 80px 15px 0;  
     max-width: 720px;
 }
 @media only screen and (min-width: ${screenSizes.M}px)
@@ -34,7 +34,9 @@ export const FooterTop = styled.div`
 
  @media (${screenSizes.M}){
     padding-bottom: 50px;
- }
+ }]\
+
+] OLoL ≥
 `;
 
 export const IconBox = styled.ul`
@@ -50,6 +52,11 @@ export const IconBox = styled.ul`
 export const Icon = styled.li`
  padding: 5px;
  opacity: 0.5;
+ :hover{
+    .svg {
+        filter: invert(.5);
+      }
+ }
 `
 export const IconImage = styled.img`
 height:28px;

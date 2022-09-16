@@ -5,10 +5,11 @@ export const Form = styled.div`
 background-color: #fff;
 border-radius: 30px;
 padding: 40px 30px;
-
+margin-bottom: 20px;
 
 @media (min-width: ${screenSizes.S}px) {
     padding: 50px; 
+    margin-bottom: 0;
 }
 `
 

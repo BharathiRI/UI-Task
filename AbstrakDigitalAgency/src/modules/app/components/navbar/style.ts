@@ -5,71 +5,9 @@ interface IProps{
     bgColor: string
 }
 
-export const NavbarBody = styled.div`
- padding: 40px 20px;
- max-width: 540px;
- height: 20vh;
- margin: 0 auto;
- position:relative;
-
- @media only screen and (min-width: ${screenSizes.S}px)
- {
-    max-width: 720px;
+interface IPosition{
+    sticky : boolean
 }
-@media only screen and (min-width: ${screenSizes.M}px)
-{
-    max-width: 960px;
-}
-@media only screen and (min-width: ${screenSizes.XL}px)
-{
-    max-width: 1140px;
-}
-@media only screen and (min-width: ${screenSizes.XXL}px)
-{
-    max-width: 1320px;
-}
-`;
-
-export const NavbarContainer = styled.div`
-display:flex;
-align-items: flex-start;
-justify-content: space-between;
-`;
-
-export const NavbarLeft = styled.div``;
-
-export const Image = styled.img``;
-
-export const NavbarCenter = styled.div`
-
-display:none;
-
-@media only screen and (min-width: ${screenSizes.L}px)
-    {
-        display:flex;
-        align-items:center;
-         flex:1;
-         justify-content: flex-end;
-    }
-`;
-
-
-export const NavbarRight = styled.div`
-`;
-
-export const NavbarActions = styled.ul`
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin:0;
-
-`;
-
-export const NavbarActionsList = styled.li`
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-`;
 
 export const ActionButton = styled.button<IProps>`
 height: 50px;
@@ -100,6 +38,67 @@ width: 50px;
         }
     }
 `
+
+export const NavbarBody = styled.header<IPosition>`
+ padding: 20px;
+ height: 13vh;
+ margin: 0 auto;
+ position:${props=>props.sticky ? "sticky" : "relative"};
+ top:0;
+ left:0;
+ right:0;
+ background-color: ${props=>props.sticky ? "#fff" : "transparent"}; 
+ width:100%;
+ z-index: 10;
+`;
+
+export const NavbarContainer = styled.div`
+display:flex;
+align-items: flex-start;
+justify-content: space-between;
+margin:0 auto;
+max-width: 95% 
+`;
+
+export const NavbarLeft = styled.div`
+`;
+
+export const Image = styled.img`
+width:80%;
+height:80%;
+`;
+
+export const NavbarCenter = styled.div`
+
+display:none;
+
+@media only screen and (min-width: ${screenSizes.L}px)
+    {
+        display:flex;
+        align-items:center;
+         flex:1;
+         justify-content: flex-end;
+    }
+`;
+
+
+export const NavbarRight = styled.div`
+`;
+
+export const NavbarActions = styled.ul`
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin:0;
+    padding:0;
+`;
+
+export const NavbarActionsList = styled.li`
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+`;
+
 export const Span = styled.span`
 display: inline-block;
 height: 2px;
@@ -115,9 +114,16 @@ height: 2px;
     margin-right: -10px;
 
     ${ActionButton}:hover & {
-        width: 10px;
-        margin-right: -10px;
-}
+            width: 20px;
+            margin-right: 0;
+
+        }
+    }
+    :first-child{
+        ${ActionButton}:hover & {
+            width: 10px;
+         margin-right: -10px;
+        }
     }
 
    
@@ -146,7 +152,8 @@ export const Span2 = styled.span`
 }
 `
 export const ThemeImage = styled.img`
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
+    margin-top:4px;
 `
 

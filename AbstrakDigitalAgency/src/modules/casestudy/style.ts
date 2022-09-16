@@ -9,24 +9,24 @@ background-color: #27272e;
 export const CaseStudyBody = styled.div`
  display: grid;
  grid-template-rows: repeat(2,auto);
- padding: 60px 35px 20px;
+ padding: 60px 15px 20px;
  max-width: 540px;
  margin: 0 auto;
 
 @media only screen and (min-width: ${screenSizes.S}px)
  {
     max-width: 720px;
-    padding: 80px 35px 40px;
+    padding: 80px 15px 40px;
 }
 @media only screen and (min-width: ${screenSizes.M}px)
 {
     max-width: 960px;
-    // padding: 100px 65px 60px
+    padding: 100px 15px 60px
 }
 @media only screen and (min-width: ${screenSizes.XL}px)
 {
     max-width: 1140px;
-    // padding: 140px 95px 100px
+    padding: 140px 15px 100px
 }
 @media only screen and (min-width: ${screenSizes.XXL}px)
 {

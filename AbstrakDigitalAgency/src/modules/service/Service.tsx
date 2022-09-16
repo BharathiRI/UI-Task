@@ -52,6 +52,7 @@ export const Service: React.FC = withTheme((props: ThemeProps<any>) => {
           width= "60%"
           align="left"
           colors="#fff"
+          subColor="#fff"
           title="What We Can Do For You"
           mainTitle="Services we can help you with"
           subTitle="Nulla et velit gravida, facilisis quam a, molestie ante. Mauris placerat suscipit dui, eget maximus tellus blandit a. Praesent non tellus sed ligula commodo blandit in et mauris."

@@ -8,24 +8,24 @@ background-color: #fff;
 export const StoriesBody = styled.div`
  display: grid;
  grid-template-rows: repeat(2,auto);
- padding: 60px 35px;
+ padding: 60px 15px;
  max-width: 540px;
  margin: 0 auto;
 
  @media only screen and (min-width: ${screenSizes.S}px)
 {
     max-width: 720px;
-    padding: 80px 35px;
+    padding: 80px 15px;
 }
 @media only screen and (min-width: ${screenSizes.M}px)
 {
   max-width: 960px;
-    // padding: 100px 65px;
+  padding: 100px 15px;
 }
 @media only screen and (min-width: ${screenSizes.XL}px)
 {
   max-width: 1140px;
-// padding: 140px 95px;
+  padding: 140px 15px;
 }
 @media only screen and (min-width: ${screenSizes.XXL}px)
 {

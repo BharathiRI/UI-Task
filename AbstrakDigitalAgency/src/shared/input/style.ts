@@ -33,4 +33,10 @@ export const Input = styled.input`
     padding: 15px 20px;
     width: 100%;
     margin-top: ${gapSizes.S};
+
+    :focus{
+        outline: none;
+        box-shadow: 0 20px 48px -14px rgb(153 161 170 / 25%);
+        border-color: transparent;
+    }
 `;

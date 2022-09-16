@@ -1,85 +1,55 @@
 import styled from 'styled-components'
-
+interface IProps{
+  expand: boolean,
+}
 export const HomeBody = styled.div`
-  display: gird;
-  grid-template-rows: repeat(11,auto);
 `
+export const FadeLayer = styled.div<IProps>`
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity:${props=>props.expand ? "0.5" : "0"};
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    transition: opacity .15s linear;
+    pointer-events: none;
+`;
 
-// export const HomeContainer = styled.div`
-//   color: #ffff;
-//   padding:40px;
+export const ThemeSwitchBox = styled.div`
+    position: fixed;
+    top: 200px;
+    left: 0;
+    background-color: #5956e9;
+    border-radius: 0 30px 30px 0;
+    padding: 10px;
+    z-index: 5;
+`;
 
-// `
-// export const TopHeading = styled.h3`
-//   color: #ffff;
-//   font-size: ${fontSizes.L};
-//   margin:40px 0 0 0;
-// `
-// export const Heading = styled.h3`
-//   color: #ffff;
-//   font-size: ${fontSizes.M};
-//   margin:20px 0;
-// `
-// export const SubHeading = styled.h4`
-//   color: #ffff;
-//   font-size: ${fontSizes.S};
-//   margin:20px 0;
-// `
+export const ThemeButton = styled.button`
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+`;
 
-// export const DummyCard = styled.div`
-//  border-radius:4px;
-//  border: 1px solid ${colors.white};
-//  padding:10px;
-//  cursor:pointer;
-//  margin-bottom:25px;
-//  text-align:center;
-//  transition: box-shadow 0.2s ease-in-out 0s, transform 0.35s ease-in-out 0s;
-//  &:hover{
-//   box-shadow: rgb(0 0 0 / 16%) 0px 11px 11px 0px;
-//   transform: translateY(-5px);
-//  }
-// `
+export const Span = styled.span`
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    background-color: transparent;
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+    line-height: 36px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+`;
 
-// export const LeftGridRow = styled.div`
-// display:grid;
-// grid-template-columns: 3fr 9fr;
-// grid-gap:20px;
-// `
-// export const RightGridRow = styled.div`
-// display:grid;
-// grid-template-columns: 9fr 3fr;
-// grid-gap:20px;
-// `
-
-// export const EqualGridRow = styled.div`
-// display:grid;
-// grid-template-columns: 6fr 6fr;
-// grid-gap:20px;
-// `
-
-
-// export const DummyColumn = styled.div`
-// border-radius:4px;
-// border: 1px solid ${colors.white};
-// padding:10px;
-// margin-bottom:25px;
-// `
-
-// export const CenterFlex = styled.div`
-// display:flex;
-// border: 1px solid ${colors.white};
-// height:200px;
-// `
-
-// export const DummyFlexColumn = styled.div`
-// display:flex;
-// border-radius:4px;
-// border: 1px solid ${colors.white};
-// padding:10px;
-// height: 80px;
-// margin: auto;
-// justify-content: center;
-// align-items: center;
-// `
-
-
+export const Image = styled.img`
+width:60%;
+height:60%;
+margin:0 auto;
+`;

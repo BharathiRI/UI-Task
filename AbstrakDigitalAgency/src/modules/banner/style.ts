@@ -11,7 +11,7 @@ export const BannerWrapper = styled.div`
 export const BannerBody = styled.div`
 display: grid;
 grid-template-columns:12fr;
-padding: 60px 20px 0;
+padding: 60px 15px 0;
 margin: 0 auto;
 @media (min-width: ${screenSizes.XS}px) {
     max-width: 540px;
@@ -19,18 +19,18 @@ margin: 0 auto;
 @media only screen and (min-width: ${screenSizes.S}px)
 {
     max-width: 720px;
-    padding: 80px 35px;
+    padding: 80px 15px;
 }
 @media only screen and (min-width: ${screenSizes.M}px)
 {
     max-width: 960px;
    grid-template-columns:6fr 6fr;
-//    padding: 100px 65px;
+  padding: 100px 15px;
 }
 @media only screen and (min-width: ${screenSizes.XL}px)
 {
     max-width: 1140px;
-// padding: 140px 95px;
+    padding: 140px 15px;
 }
 @media only screen and (min-width: ${screenSizes.XXL}px)
  {

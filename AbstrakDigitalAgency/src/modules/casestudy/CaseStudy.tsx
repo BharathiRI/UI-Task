@@ -39,6 +39,7 @@ export const CaseStudy = () => {
           width= "60%"
           align="center"
           colors="#fff"
+          subColor='#fff'
           title="Pricing Plan"
           mainTitle="We’ve built solutions for..."
           subTitle="Flexible pricing options for freelancers and design teams."

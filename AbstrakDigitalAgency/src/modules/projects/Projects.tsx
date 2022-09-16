@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Heading } from '../../shared/Heading/Heading'
 import { getImageUrl } from '../../shared/helpers/util'
 import { Card } from './components/card/Card'
@@ -5,6 +6,11 @@ import * as Styled from './style'
 
 
 export const Projects = () => {
+
+  const [active1,setActive1] = useState<boolean>(false);
+  const [active2,setActive2] = useState<boolean>(false);
+  const [active3,setActive3] = useState<boolean>(false);
+
   const cardArray = [
     {
       id: '1',
@@ -44,8 +50,6 @@ export const Projects = () => {
     },
   ]
 
-
-
   return (
     <Styled.CardWrapper>
     <Styled.ProjectBody>
@@ -55,6 +59,23 @@ export const Projects = () => {
         title="Our Project"
         mainTitle ="Some of our finest work"
       />
+      <Styled.ProjectTypeBox>
+          <Styled.ProjectText onClick={()=>{
+              setActive1(true)
+              setActive2(false)
+              setActive3(false)
+              }} active={active1}>All Works</Styled.ProjectText>
+          <Styled.ProjectText onClick={()=>{
+              setActive1(false)
+              setActive2(true)
+              setActive3(false)
+              }} active={active2}>Branding</Styled.ProjectText>
+          <Styled.ProjectText onClick={()=>{
+              setActive1(false)
+              setActive2(false)
+              setActive3(true)
+              }} active={active3}>Mobile</Styled.ProjectText>
+        </Styled.ProjectTypeBox>
      <Styled.CardContainer>
         {cardArray?.map((card) => {
           return <Card key={card.id} image={card.image} title={card.title} content={card.content} />

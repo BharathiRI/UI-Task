@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import { Heading } from '../../shared/Heading/Heading'
 import { Card } from './components/card/Card'
 import * as Styled from './style'
 
 export const PricePlans = () => {
+
+  const [active1,setActive1] = useState<boolean>(false);
+  const [active2,setActive2] = useState<boolean>(false);
+
   const cardArray = [
     {
       id: '1',
@@ -62,6 +67,20 @@ export const PricePlans = () => {
           mainTitle="We’ve built solutions for..."
           subTitle="Flexible pricing options for freelancers and design teams."
         />
+        <Styled.BillPlanBox>
+          <Styled.BillBox>
+            <Styled.BillButton onClick={()=>{
+              setActive1(true)
+              setActive2(false)
+              }} active={active1}>Billed Yearly</Styled.BillButton>
+          </Styled.BillBox>
+          <Styled.BillBox>
+            <Styled.BillButton onClick={()=>{
+              setActive2(true)
+              setActive1(false)
+              }} active={active2}>Billed Monthly</Styled.BillButton>
+          </Styled.BillBox>
+        </Styled.BillPlanBox>
       <Styled.CardContainer>
         {cardArray?.map((card) => {
           return (

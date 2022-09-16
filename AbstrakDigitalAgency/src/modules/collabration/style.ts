@@ -45,7 +45,7 @@ position: relative;
 `;
 
 export const CollabrationBody = styled.div`
- padding: 60px 20px 20px;
+ padding: 60px 15px 20px;
  max-width: 540px;
  margin: 0 auto;
  position:relative;
@@ -53,17 +53,17 @@ export const CollabrationBody = styled.div`
  @media only screen and (min-width: ${screenSizes.S}px)
  {
     max-width: 720px;
-    padding: 80px 20px 40px;
+    padding: 80px 15px 40px;
 }
 @media only screen and (min-width: ${screenSizes.M}px)
 {
     max-width: 960px;
-    padding: 100px 40px 60px
+    padding: 100px 15px 60px
 }
 @media only screen and (min-width: ${screenSizes.XL}px)
 {
     max-width: 1140px;
-    padding: 140px 80p 100px
+    padding: 140px 15px 100px
 
 }
 @media only screen and (min-width: ${screenSizes.XXL}px)

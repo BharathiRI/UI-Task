@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { gapSizes, screenSizes } from "../../../../styles/theme";
 
+export const CardBottomLines = styled.div`
+  display:flex;
+  align-items: flex-start;
+  column-gap:${gapSizes.S};
+ transition: all .3s ease-in-out;
+`;
 
 export const PricePlansCard = styled.div`
  color: #333;
@@ -18,7 +24,12 @@ export const PricePlansCard = styled.div`
 
    :hover {
         background-color: #5956e9;
+
+        ${CardBottomLines} > svg {
+          fill : #fff;
+        }
     }
+   
 `
 export const CardTop = styled.div`
  text-align: center;
@@ -88,15 +99,7 @@ export const CardBottom = styled.div`
   margin-top:30px;
 `;
 
-export const CardBottomLines = styled.div`
-  display:flex;
-  align-items: flex-start;
-  column-gap:${gapSizes.S};
- transition: all .3s ease-in-out;
-`;
-
-
-export const Right = styled.img`
+export const Image = styled.img`
 opacity:0.4;
 `;
 

@@ -16,7 +16,18 @@ export const Form = () => {
           <Input type="email" labelText="Email" placeholder="john@gmail.com" />
           <Input type="tel" labelText="Phone" placeholder="+253625634"/>                 
         </Styled.FormInputBox>
-        <Button maxWidth="100%" type="submit" size="18px 55px" largeSize="23px 55px" color="Yes" buttonText="Get Free Quote"/>
+        <Button
+                type="submit"
+                size="18px 55px"
+                largeSize="23px 55px"
+                color="#fff"
+                bgColor="#5956e9"
+                hoverBgColor='#2522ba'
+                hoverColor='#fff'
+                border="none"
+                buttonText="Get Free Quote"
+                maxWidth="100%"
+              />
         </Styled.FormBottom>
     </Styled.Form>
   )
