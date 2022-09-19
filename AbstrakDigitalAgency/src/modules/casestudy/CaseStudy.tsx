@@ -9,25 +9,25 @@ export const CaseStudy = () => {
     {
       id: '1',
       image: `${getImageUrl}\icon/icon-7.png`,
-      data: '15+',
+      data: 15,
       content: 'Years of operation'
     },
     {
       id: '2',
       image: `${getImageUrl}\icon/icon-8.png`,
-      data: '360+',
+      data: 360,
       content: 'Projects deliverd'
     },
     {
       id: '3',
       image: `${getImageUrl}\icon/icon-9.png`,
-      data: '600+',
+      data: 600,
       content: 'Specialist'
     },
     {
       id: '4',
       image: `${getImageUrl}\icon/apple.png`,
-      data: '64+',
+      data: 64,
       content: 'Years of operation'
     }
   ]

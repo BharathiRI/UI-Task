@@ -32,7 +32,7 @@ export const CardContentText = styled.p`
  color: #525260;
  font-weight: 400;
  line-height: 1.5;
- font-size: ${fontSizes.S}
+ font-size: ${fontSizes.S};
 `
 export const CardTitleText = styled.h4`
 color: #292930;

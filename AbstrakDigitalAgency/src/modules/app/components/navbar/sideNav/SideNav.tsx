@@ -11,6 +11,7 @@ interface IProps{
 export const SideNav = ({expand,setExpand}:IProps) => {
 
   const textArray = ['Digital Agency', 'Creative Agency', 'Portfolio Agency', 'Home Startup', 'Corporate Agency']
+  const iconArray = []
 
   return (
     <Styled.SideNavBody expand={expand}>

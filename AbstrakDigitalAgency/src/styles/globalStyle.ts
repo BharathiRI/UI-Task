@@ -1,11 +1,9 @@
 import { createGlobalStyle, ThemeProps, css } from 'styled-components'
 import { fontSizes, gapSizes, screenSizes, Theme } from './theme'
-import NunitoSans from '../assets/fonts/NunitoSans/NunitoSans-Regular.ttf'
-import NunitoSansBlack from '../assets/fonts/NunitoSans/NunitoSans-Black.ttf'
-import NunitoSansLight from '../assets/fonts/NunitoSans/NunitoSans-Light.ttf'
-import NunitoSansBold from '../assets/fonts/NunitoSans/NunitoSans-Bold.ttf'
-import NunitoSansExtraBold from '../assets/fonts/NunitoSans/NunitoSans-ExtraBold.ttf'
-import NunitoSansSemiBold from '../assets/fonts/NunitoSans/NunitoSans-SemiBold.ttf'
+import HelveticaSans from '../assets/fonts/Helvetica/HelveticaSans.ttf';
+import HelveticaSansBold from '../assets/fonts/Helvetica/HelveticaSansBold.ttf'
+import HelveticaNeueBold from '../assets/fonts/Helvetica/HelveticaNeue.ttf'
+
 
 import { rgba } from 'polished'
 
@@ -26,50 +24,47 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   @font-face {
-    font-family: NunitoSans;
-    src: url(${NunitoSans});
+    font-family: HelveticaSans;
+    src: url(${HelveticaSans});
   } 
   @font-face {
-    font-family: NunitoSansSemiBold;
-    src: url(${NunitoSansSemiBold});
+    font-family: HelveticaSansBold;
+    src: url(${HelveticaSansBold});
   } 
   @font-face {
-    font-family: NunitoSansBlack;
-    src: url(${NunitoSansBlack});
-  }
-  @font-face {
-    font-family: NunitoSansBold;
-    src: url(${NunitoSansBold});
-  }
-  @font-face {
-    font-family: NunitoSansExtraBold;
-    src: url(${NunitoSansExtraBold});
-  }
-  @font-face {
-    font-family: NunitoSansLight;
-    src: url(${NunitoSansLight});
-  }
+    font-family: HelveticaNeueBold;
+    src: url(${HelveticaNeueBold});
+  } 
+
   address, blockquote, h1, h2, h3, h4, h5, h6, hr, p, pre, table {
     margin: 0 0 30px;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     line-height: 1.2;
-      letter-spacing: -.025em;
+    letter-spacing: -.025em;
   }
- }
+  h1{
+    font-size: 80px;
+    font-weight: 500;
+    font-family: ${HelveticaSansBold};
+    @media only screen and (max-width: ${screenSizes.XL}) {
+    font-size: 68px;
+}
+  }
+
   h2{
-   font-size: calc(1.325rem + .9vw);
+    font-size: calc(1.325rem + .9vw);
     @media (max-width: ${screenSizes.XS})
- h2 {
+ {
     font-size: 34px;
 }
     @media (max-width: ${screenSizes.S})
-  h2 {
+   {
     font-size: 38px;
 }
 @media (max-width: ${screenSizes.XL})
-  h2 {
+  {
     font-size: 56px;
 }
   }
@@ -91,27 +86,27 @@ h1, h2, h3, h4, h5, h6 {
   font-size: calc(1.275rem + .3vw);
 
   @media only screen and (max-width: ${screenSizes.S})
- h4 {
+ {
     font-size: 20px;
 }
 @media only screen and (${screenSizes.XL})
- h4 {
+ {
     font-size: 26px;
 }
  }
  h5{
   line-height: 1.4;
   font-size: 24px;
-  media only screen and (max-width: ${screenSizes.S})
-  h5 {
+  @media only screen and (max-width: ${screenSizes.S})
+ {
     font-size: 20px;
 }
  }
  h6{
    font-size: 18px;
     line-height: 1.2;
-    media only screen and (max-width: ${screenSizes.S})
-  h5 {
+   @media only screen and (max-width: ${screenSizes.S})
+  {
     font-size: 20px;
 }
  }
@@ -124,16 +119,19 @@ h1, h2, h3, h4, h5, h6 {
   }
   html,
   body {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     height: 100%;
     scroll-behavior: smooth;
     width: 100%;
+    overflow-x:hidden;
   }
   body {
     min-height: 100%;
     margin: 0;
     padding: 0;
-    // background-color: ${(props: ThemeProps<Theme>) => props.theme.secondary};
+    /* background-color: ${(props: ThemeProps<Theme>) => props.theme.mainBgColor};  */
+    background-color: #fff;
   }
   *::-webkit-scrollbar {
     width: 12px;
@@ -156,15 +154,15 @@ h1, h2, h3, h4, h5, h6 {
   *::before,
   *::after {
     box-sizing: border-box;
-    font-family: NunitoSans;
+    font-family: HelveticaSans;
   }
   a{
-    font-family: 'NunitoSansSemiBold';
+    font-family: 'HelveticaSansSemiBold';
     text-decoration: none;
     color: ${(props: ThemeProps<Theme>) => props.theme.white};
   }
   label {
-    font-size: ${fontSizes.XS}
+    font-size: ${fontSizes.XS};
     position: relative;
     color: ${(props) => props.theme.label};
   }

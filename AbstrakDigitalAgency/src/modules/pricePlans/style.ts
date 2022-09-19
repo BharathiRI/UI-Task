@@ -7,6 +7,8 @@ interface IActive{
 
 export const CardWrapper = styled.div`
 background-color: #ecf2f6;
+position: relative;
+z-index:1;
 `
 export const PricePlansBody = styled.div`
  display: grid;

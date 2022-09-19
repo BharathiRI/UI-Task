@@ -14,6 +14,7 @@ padding:0;
 `;
 
 export const DropdownList = styled.li<IProps>`
+position: relative;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -35,6 +36,7 @@ border-bottom: ${props=>props.view === "Mobile" ? "1px solid #dbdeff" : "none"};
 
 export const DropdownTextBox = styled.a<IProps>`
     width:100%;
+    font-family: "HelveticaSansBold";
     font-weight: 500;
     font-size: 16px;
     color: #525260;
@@ -61,15 +63,19 @@ margin-right: 5px;
 
 export const DropdownSubMenuList = styled.li<IProps>`
     margin: 0;
-    transition: all .3s ease-in-out;
     opacity: 0;
-    transform: translateX(20px);
     text-decoration:none;
+    transform: translateX(20px);
+    transition: all .9s ease-in-out;
+
     ${DropdownList}:hover & {
         opacity: 1;
         transform: translateX(0);
     }
-    
+
+    :nth-child(1n) {
+    transition-delay: .1s
+}
     :hover{
         text-decoration: ${props=>props.view === "Mobile" ?"none" : "line-through 2px #5956e9"};
     }
@@ -82,13 +88,12 @@ export const DropdownSubMenu = styled.ul<IProps>`
     display:none;
     opacity: 0;
     visibility: hidden;
-    min-width: ${props=>props.view === "Mobile" ? "100%" : "250px"}
+    min-width: ${props=>props.view === "Mobile" ? "100%" : "250px"};
     border-radius: 4px;
     transition: ${props=>props.view === "Mobile" ? "none 0s ease 0s" : "all .3s ease-in-out"};
     cursor: pointer;
     width: 200px;
     padding:10px 15px;
-
     ${DropdownList}:hover & {
     opacity: 1;
     display: block;
@@ -97,12 +102,13 @@ export const DropdownSubMenu = styled.ul<IProps>`
     left: 0;
     margin: 20px 0;
     box-shadow: ${props=>props.view === "Mobile" ? "none" : "0 13px 48px 0 rgb(0 0 0 / 15%)" };
-    }
-
-    ${DropdownSubMenuList} {
+    /* ${DropdownSubMenuList} {
         opacity: 1;
         transform: translateX(0);
+    } */
     }
+
+    
 `;
 
 export const DropdownSubText = styled.p`

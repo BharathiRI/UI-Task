@@ -1,6 +1,7 @@
 import { Heading } from '../../shared/Heading/Heading'
 import { getImageUrl } from '../../shared/helpers/util'
 import { Card } from './components/card/Card'
+import { BackgroundLayer } from './components/backgroundLayer/BackgroundLayer'
 import * as Styled from './style'
 
 
@@ -58,6 +59,7 @@ export const Clients = () => {
         })}
       </Styled.CardContainer>
     </Styled.ClientsBody>
+    <BackgroundLayer/>
     </Styled.CardWrapper>
   )
 }

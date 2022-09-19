@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { Heading } from '../../shared/Heading/Heading'
 import { getImageUrl } from '../../shared/helpers/util'
+import { BackgroundLayer } from './components/backgroundLayer/BackgroundLayer'
 import { Card } from './components/card/Card'
 import * as Styled from './style'
 
 
 export const Projects = () => {
 
-  const [active1,setActive1] = useState<boolean>(false);
+  const [active1,setActive1] = useState<boolean>(true);
   const [active2,setActive2] = useState<boolean>(false);
   const [active3,setActive3] = useState<boolean>(false);
 
@@ -57,7 +58,7 @@ export const Projects = () => {
         align="left"
         colors="#292930"
         title="Our Project"
-        mainTitle ="Some of our finest work"
+        mainTitle ={`Some of our\nfinest work`}
       />
       <Styled.ProjectTypeBox>
           <Styled.ProjectText onClick={()=>{
@@ -82,6 +83,7 @@ export const Projects = () => {
         })}
       </Styled.CardContainer>
     </Styled.ProjectBody>
+    <BackgroundLayer/>
     </Styled.CardWrapper>
   )
 }

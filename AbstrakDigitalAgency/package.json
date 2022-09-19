@@ -12,7 +12,8 @@
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "lint": "yarn run eslint --ext .ts,.tsx ."
+    "lint": "yarn run eslint --ext .ts,.tsx .",
+    "postinstall": "node -e \"if(require('fs').existsSync('.git')){process.exit(1)}\" || is-ci || husky install"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.16.4",
@@ -41,6 +42,8 @@
     "path": "^0.12.7",
     "polished": "^4.1.4",
     "react": "^17.0.2",
+    "react-animated-number": "^0.4.4",
+    "react-countup": "^6.3.1",
     "react-dom": "^17.0.2",
     "react-lottie": "^1.2.3",
     "react-multi-carousel": "^2.2.6",

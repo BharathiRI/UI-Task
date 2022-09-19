@@ -1,4 +1,5 @@
 import { Heading } from '../../shared/Heading/Heading'
+import { BackgroundLayer } from './components/backgroundLayer/BackgroundLayer'
 import { Form } from './form/Form'
 import * as Styled from './style'
 
@@ -20,6 +21,7 @@ export const Contact = () => {
         <Form />
       </Styled.ContactRight>
     </Styled.ContactBody>
+    <BackgroundLayer/>
     </Styled.ContactWrapper>
   )
 }

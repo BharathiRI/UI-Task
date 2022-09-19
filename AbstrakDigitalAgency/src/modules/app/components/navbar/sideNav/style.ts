@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { slide, slideInLeft, slideInRight } from "../../../../../styles/styled";
 import { screenSizes } from "../../../../../styles/theme";
 
 interface IProps{
@@ -14,11 +15,11 @@ export const SideNavBody = styled.div<IProps>`
     height:100%;
     visibility: ${props=>props.expand ? "visible" : "hidden"};
     opacity:${props=>props.expand  ? "1" : "0"};
+    transform: ${props=>props.expand ? "none" : "translateX(100%)"};
     outline: 0;
     border-left: 1px solid rgba(0,0,0,.2);
     background-color: #fff;
-    overflow-y: auto;
-    transition: transform .3s ease-in-out;
+    transition: all .4s cubic-bezier(.77,.2,.05,1);
 
     @media only screen and (min-width: ${screenSizes.XL}px)
 {
@@ -31,6 +32,8 @@ display: flex;
 flex-direction: column;
 width:90%;
 margin:0 auto;
+background-color: #fff;
+overflow-y: auto;
 `;
 
 export const SideNavHeader = styled.div``;

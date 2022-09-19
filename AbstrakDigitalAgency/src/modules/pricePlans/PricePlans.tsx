@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Heading } from '../../shared/Heading/Heading'
 import { Card } from './components/card/Card'
+import { BackgroundLayer }  from './components/backgroundLayer/BackgroundLayer'
 import * as Styled from './style'
 
 export const PricePlans = () => {
 
-  const [active1,setActive1] = useState<boolean>(false);
+  const [active1,setActive1] = useState<boolean>(true);
   const [active2,setActive2] = useState<boolean>(false);
 
   const cardArray = [
@@ -97,6 +98,7 @@ export const PricePlans = () => {
         })}
       </Styled.CardContainer>
     </Styled.PricePlansBody>
+    <BackgroundLayer/>
     </Styled.CardWrapper>
   )
 }

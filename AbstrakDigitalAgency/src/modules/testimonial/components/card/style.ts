@@ -22,9 +22,6 @@ overflow: hidden;
 export const CardTopImage = styled.img`
 width: 50px;
 height: 50px;
-font-size: 20px;
-font-weight: 700;
-color: #c75c6f;
 margin-bottom: 30px;
 `;
 

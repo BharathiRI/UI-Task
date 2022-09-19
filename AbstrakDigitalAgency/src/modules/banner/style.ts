@@ -1,109 +1,122 @@
-import styled from "styled-components";
-import { screenSizes } from "../../styles/theme";
-
-interface IImage{
-width: string
-}
+import styled from 'styled-components'
+import { fadeInUp, slideInLeft, slideInRight, zoomIn } from '../../styles/styled'
+import { screenSizes } from '../../styles/theme'
 
 export const BannerWrapper = styled.div`
-`;
+ position: relative;
+ z-index: 1;
+ min-height: 100%;
+ 
+`
 
 export const BannerBody = styled.div`
-display: grid;
-grid-template-columns:12fr;
-padding: 60px 15px 0;
-margin: 0 auto;
-@media (min-width: ${screenSizes.XS}px) {
+  display: grid;
+  grid-template-columns: 12fr;
+  margin: 0 auto;
+  padding: 200px 15px 0;
+  @media (min-width: ${screenSizes.XS}px) {
     max-width: 540px;
   }
-@media only screen and (min-width: ${screenSizes.S}px)
-{
+  @media only screen and (min-width: ${screenSizes.S}px) {
     max-width: 720px;
-    padding: 80px 15px;
-}
-@media only screen and (min-width: ${screenSizes.M}px)
-{
+  }
+  @media only screen and (min-width: ${screenSizes.M}px) {
     max-width: 960px;
-   grid-template-columns:6fr 6fr;
-  padding: 100px 15px;
-}
-@media only screen and (min-width: ${screenSizes.XL}px)
-{
+    grid-template-columns: 6fr 6fr;
+  }
+  @media only screen and (min-width: ${screenSizes.XL}px) {
     max-width: 1140px;
-    padding: 140px 15px;
-}
-@media only screen and (min-width: ${screenSizes.XXL}px)
- {
-     max-width: 1320px;
- }
-`;
+  }
+  @media only screen and (min-width: ${screenSizes.XXL}px) {
+    max-width: 1320px;
+  }
+`
 
 export const BannerLeft = styled.div`
-`;
+  max-width: 90%;
+  margin-bottom: 100px;
+  @media only screen and (min-width: ${screenSizes.S}px) {
+    margin-bottom: none;
+  }
+`
 
 export const AnimatedBox1 = styled.div`
-animation-name: fadeInUp;
-animation-duration: 1s;
-`;
+  animation: ${fadeInUp} 5s;
+`
 
 export const AnimatedBox2 = styled.div`
-animation-name: zoomIn;
-animation-duration: 2s;
-   
-`;
+  animation: ${zoomIn} 5s;
+  transition: all 0.7s ease;
+`
 
 export const AnimatedBox3 = styled.div`
-animation-name: slideInRight;
-animation-duration: 2s;
+  align-self: flex-end;
+  justify-self: flex-end;
+  animation: ${slideInRight} 5s;
+  transition: all 0.7 ease;
+`
 
-`;
+export const AnimatedBox4 = styled.div`
+  animation: ${slideInLeft} 5s;
+  transition: all 0.7s ease;
+`
+export const BannerHeading = styled.h1`
+  line-height: 1;
+  font-size: 40px;
+  font-family: 'HelveticaSansBold';
+  @media only screen and (min-width: ${screenSizes.S}px) {
+    font-size: 55px;
+  }
+  @media only screen and (min-width: ${screenSizes.XL}px) {
+    font-size: 60px;
+  }
+`
 
-export const BannerHeading = styled.h1``
-
-export const BannerContent = styled.p``
+export const BannerContent = styled.p`
+`
 
 export const BannerRight = styled.div`
-display: flex;
-align-items: center;
-margin:0 auto;
-border-bottom: 1px solid #e3e6e9;
-@media (min-width: ${screenSizes.S}px)
-{
-}
-@media (min-width: ${screenSizes.XL}px)
-{
-    justify-self: right;
-}
-@media (min-width: ${screenSizes.XXL}px)
-{
-    justify-self: center;
-}
-`;
+  position: relative;
+  z-index: 5;
+`
 
-export const ImageBox1 = styled.div`
-margin-top: 0px;
-@media only screen and (min-width: ${screenSizes.S}px)
-{
-}
-@media only screen and (min-width: ${screenSizes.M}px)
-{
-    margin-top: -200px;
-}
-@media only screen and (min-width: ${screenSizes.XL}px)
- {
-    margin-top: -150px;
- }
- @media only screen and (min-width: ${screenSizes.XL}px)
- {
-    margin-right: -50px;
-    margin-top:-100px;
- }
-`;
+export const ImageBox1 = styled.div``
 
 export const ImageBox2 = styled.div`
+  margin-top: 0;
+  text-align: center;
+  bottom: 0;
+  position: absolute;
 
-`;
-
-export const Image = styled.img<IImage>`
-width: ${props=>props.width};
+  @media only screen and (min-width: ${screenSizes.S}px) {
+    position: static;
+    margin-top: -260px;
+    margin-right: 0;
+  }
+  @media only screen and (min-width: ${screenSizes.M}px) {
+    margin-top: -200px;
+    margin-right: -30px;
+  }
+  @media only screen and (min-width: ${screenSizes.XL}px) {
+    text-align: right;
+    margin-top: -260px;
+    margin-right: -50px;
+  }
 `
+
+export const ImageBox3 = styled.div`
+  z-index: -2;
+  position: absolute;
+  top: -25px;
+  left: auto;
+  right: 20px;
+  display: none;
+  @media only screen and (min-width: ${screenSizes.XL}px) {
+    right: 0;
+    display: block;
+  }
+`
+
+export const Image = styled.img``
+
+

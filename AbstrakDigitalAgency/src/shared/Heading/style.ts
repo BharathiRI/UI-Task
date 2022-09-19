@@ -26,6 +26,7 @@ export const HeadingBody = styled.div<Iprops>`
 export const Title = styled.span`
   color: #c75c6f;
   font-size: ${fontSizes.XXS};
+  font-family: 'HelveticaSansBold';
   font-weight: 500;
   margin-bottom: 15px;
 

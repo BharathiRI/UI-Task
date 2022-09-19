@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { slideInLeft } from "../../../../../styles/styled";
 
 interface IProps{
     expand: boolean
@@ -13,6 +14,7 @@ export const MobileNavBody = styled.div<IProps>`
     visibility: ${props=>props.expand ? "visible" : "hidden"};
     opacity:${props=>props.expand  ? "1" : "0"};
     z-index: 1500;
+    animation: ${slideInLeft} .7s;
     transition: all .8s cubic-bezier(.77,.2,.05,1);
 `;
 

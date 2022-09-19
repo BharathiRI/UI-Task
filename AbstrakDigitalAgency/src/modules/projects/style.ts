@@ -7,6 +7,8 @@ interface IProps{
 
 export const CardWrapper = styled.div`
 background-color: #fff;
+position: relative;
+z-index: 1;
 `;
 
 export const ProjectBody = styled.div`
@@ -53,14 +55,20 @@ max-width: 100%;
 `;
 
 export const ProjectText = styled.div<IProps>`
-margin-right:15%;
-font-size: 18px;
+margin-right:10%;
+font-size: 16px;
+font-family: 'HelveticaSans';
 font-weight:500;
 cursor: pointer;
 padding-bottom: 4px;
 border-bottom-style:  ${props=>props.active ? "solid" : "none"};
 border-bottom-width:  ${props=>props.active ? "2px" : "none"};
 border-bottom-color:  ${props=>props.active ? "#0d6efd" : "none"};
+@media only screen and (min-width: ${screenSizes.XS}px)
+ {
+  margin-right:15%;
+  font-size: 18px;
+ }
 @media only screen and (min-width: ${screenSizes.XL}px)
  {
    font-size: 20px;

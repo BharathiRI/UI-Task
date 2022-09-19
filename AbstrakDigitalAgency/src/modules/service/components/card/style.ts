@@ -40,7 +40,7 @@ export const CardLeft = styled.div`
 export const CardRight = styled.div`
  display:grid;
  grid-template-rows: repeat(3,auto);
- align-items: start
+ align-items: start;
 `;
 
 export const CardTitle = styled.div``;
@@ -50,6 +50,7 @@ margin-bottom:30px;
 `;
 
 export const CardLink = styled.div`
+cursor: pointer;
 span {
     margin-right: ${gapSizes.S};
 }

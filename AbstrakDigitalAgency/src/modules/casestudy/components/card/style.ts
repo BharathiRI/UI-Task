@@ -12,6 +12,11 @@ export const CaseStudyCard = styled.div`
         background: linear-gradient(180deg,#27272e,#303035);
     }
 `
+export const CardSpan = styled.span`
+font-size: 46px;
+font-family: 'HelveticaSansBold';
+font-weight: 800;
+`;
 
 export const CardContentText = styled.h6`
  color: #fff;

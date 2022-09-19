@@ -1,6 +1,7 @@
 import { Button } from "../../shared/button/Button"
 import { Heading } from "../../shared/Heading/Heading"
 import { getImageUrl } from "../../shared/helpers/util"
+import { BackgroundLayer } from "./components/backgroundLayer/BackgroundLayer"
 import * as Styled from './style'
 
 export const Collabration = () => {
@@ -36,6 +37,7 @@ export const Collabration = () => {
            </Styled.CollabrationImageList2>
         </Styled.CollabrationBottom>
       </Styled.CollabrationBody>
+      <BackgroundLayer/>
     </Styled.CardWrapper>
   )
 }

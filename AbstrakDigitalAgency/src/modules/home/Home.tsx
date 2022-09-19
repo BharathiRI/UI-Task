@@ -18,24 +18,42 @@ import { Testimonial } from '../testimonial/Testimonial'
 import Dark from '../../assets/images/icons/dark.svg'
 //  Style
 import * as Styled from './style'
+import { useScreenSize } from '../../shared/hooks/useScreenSize'
+import { getTheme, Themes } from '../../styles/theme'
 
 /**
  * It merge all the sections of the website
  */
 
 export const Home: React.FC = withTheme((props: ThemeProps<any>) => {
+
   const [expand, setExpand] = useState<boolean>(false);
+  const {matches:currentScreenSize} = useScreenSize();
+  const [dark,setDark] = useState<boolean>(false);
+
+  const switchTheme = () =>{
+    let changeLocalTheme: string;
+
+    const Theme = localStorage.getItem("currentTheme");
+    if(Theme === "lightTheme"){
+        changeLocalTheme = "darkTheme";
+    }else{
+        changeLocalTheme = "lightTheme";
+    }
+    localStorage.setItem('currentTheme',changeLocalTheme)
+    setDark(!dark)
+  } 
 
   return (
     <>
     {expand && <Styled.FadeLayer expand={expand}></Styled.FadeLayer> }
-      <Styled.ThemeSwitchBox>
-        <Styled.ThemeButton>
+      {currentScreenSize >= 1024 && <Styled.ThemeSwitchBox>
+        <Styled.ThemeButton onClick={()=>switchTheme()}>
           <Styled.Span>
             <Styled.Image src={Dark} alt="" />
           </Styled.Span>
         </Styled.ThemeButton>
-      </Styled.ThemeSwitchBox>
+      </Styled.ThemeSwitchBox>}
       <Styled.HomeBody>
         <Navbar expand={expand} setExpand={setExpand}/>
         <Banner />

@@ -1,6 +1,7 @@
 import { ThemeProps, withTheme } from "styled-components"
 import { Heading } from "../../shared/Heading/Heading"
 import { getImageUrl } from "../../shared/helpers/util"
+import { BackgroundLayer } from "./components/backgroundLayer/BackgroundLayer"
 import { Card } from "./components/card/Card"
 import * as Styled from './style'
 
@@ -65,6 +66,7 @@ export const Service: React.FC = withTheme((props: ThemeProps<any>) => {
             }
         </Styled.CardContainer>
     </Styled.ServiceBody>
+    <BackgroundLayer/>
     </Styled.CardWrapper>
   )
 })

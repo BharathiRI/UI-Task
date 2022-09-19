@@ -9,6 +9,7 @@ interface IPosition{
     sticky : boolean
 }
 
+
 export const ActionButton = styled.button<IProps>`
 height: 50px;
 width: 50px;
@@ -41,9 +42,9 @@ width: 50px;
 
 export const NavbarBody = styled.header<IPosition>`
  padding: 20px;
- height: 13vh;
  margin: 0 auto;
- position:${props=>props.sticky ? "sticky" : "relative"};
+ height: 13vh;
+ position:${props=>props.sticky ? "sticky" : "absolute"};
  top:0;
  left:0;
  right:0;
@@ -57,15 +58,15 @@ display:flex;
 align-items: flex-start;
 justify-content: space-between;
 margin:0 auto;
-max-width: 95% 
+max-width: 95%;
 `;
 
 export const NavbarLeft = styled.div`
+flex:1;
 `;
 
 export const Image = styled.img`
-width:80%;
-height:80%;
+width: 150px;
 `;
 
 export const NavbarCenter = styled.div`
@@ -76,8 +77,8 @@ display:none;
     {
         display:flex;
         align-items:center;
-         flex:1;
-         justify-content: flex-end;
+        flex:1;
+        justify-content: flex-end;
     }
 `;
 
@@ -149,7 +150,6 @@ export const Span2 = styled.span`
         height: 30px;
         width: 30px;
     }
-}
 `
 export const ThemeImage = styled.img`
     height: 20px;

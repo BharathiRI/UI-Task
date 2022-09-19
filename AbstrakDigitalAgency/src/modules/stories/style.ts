@@ -3,6 +3,8 @@ import { screenSizes } from '../../styles/theme'
 
 export const CardWrapper = styled.div`
 background-color: #fff;
+position: relative;
+z-index:1;
 `;
 
 export const StoriesBody = styled.div`

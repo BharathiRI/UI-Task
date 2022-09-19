@@ -6,10 +6,12 @@ interface IProps{
 }
 
 export const CardWrapper = styled.div`
+padding-top:20px;
 position: relative;
+z-index: 1;
 :before{
     content: "";
-    height: 370px;
+    height: 400px;
     width: 100%;
     background-color: #5956e9;
     position: absolute;
@@ -18,28 +20,22 @@ position: relative;
     right: 0;
     z-index: -1;
 }
-@media only screen and (min-width: ${screenSizes.S}px)
- {
-   :before{
-        height: 430px;
-    }
-}
-@media only screen and (min-width: ${screenSizes.M}px)
+@media only screen and (min-width: ${screenSizes.XS}px)
  {
    :before{
         height: 480px;
     }
 }
+@media only screen and (min-width: ${screenSizes.M}px)
+ {
+   :before{
+        height: 500px;
+    }
+}
 @media only screen and (min-width: ${screenSizes.L}px)
  {
    :before{
-        height: 510px;
-    }
-}
-@media only screen and (min-width: ${screenSizes.XL}px)
-{
-  :before{
-        height: 530px;
+        height: 730px;
     }
 }
 `;
@@ -87,6 +83,23 @@ display: flex;
 align-items: center;
 border-bottom: 1px solid #e3e6e9;
 position: absolute;
+bottom:-40%;
+@media only screen and (min-width: ${screenSizes.XS}px)
+ {
+    bottom:-56%;
+}
+@media only screen and (min-width: ${screenSizes.M}px)
+ {
+    bottom:-90%;
+}
+@media only screen and (min-width: ${screenSizes.L}px)
+ {
+    bottom:-80%;
+}
+@media only screen and (min-width: ${screenSizes.XL}px)
+ {
+    bottom:-50%;
+}
 @media only screen and (min-width: ${screenSizes.XXL}px)
 {
     left: 200px;

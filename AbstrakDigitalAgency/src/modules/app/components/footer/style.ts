@@ -9,18 +9,24 @@ export const FooterBody = styled.div`
 padding: 60px 15px 0;
 max-width: 540px;
 margin: 100px auto 0;
- @media only screen and (min-width: ${screenSizes.S}px)
+ @media only screen and (min-width: ${screenSizes.XS}px)
  {
-    margin: 200px auto 0;
+    margin: 150px auto 0;
     padding: 80px 15px 0;  
     max-width: 720px;
 }
+@media only screen and (min-width: ${screenSizes.S}px)
+ {
+    margin: 200px auto 0;
+}
 @media only screen and (min-width: ${screenSizes.M}px)
 {
+    margin: 250px auto 0;
     max-width: 960px;
 }
 @media only screen and (min-width: ${screenSizes.XL}px)
 {
+    margin: 300px auto 0;
     max-width: 1140px;
 }
 @media only screen and (min-width: ${screenSizes.XXL}px)
@@ -59,8 +65,18 @@ export const Icon = styled.li`
  }
 `
 export const IconImage = styled.img`
-height:28px;
-width:28px;
+height:20px;
+width:20px;
+@media only screen and (min-width: ${screenSizes.S}px)
+{
+    height:25px;
+    width:25px;
+}
+@media only screen and (min-width: ${screenSizes.M}px)
+{
+    height:28px;
+    width:28px;
+}
 `;
 
 export const FooterCenter = styled.div`
@@ -167,6 +183,7 @@ grid-gap: 10px;
 export const ListBox = styled.div``;
 
 export const ListHeading = styled.h6`
+font-family: 'HelveticaSansBold';
 font-weight: 700;
 `
 
@@ -181,12 +198,14 @@ export const FooterBottom = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-between;
+justify-content: center;
+text-align:center;
 border-top: 1px solid #c7c7d5;
 padding: 25px 0;
 
 @media only screen and (min-width: ${screenSizes.S}px)
 {
     flex-direction: row;
+    justify-content: space-between;
 }
 `;

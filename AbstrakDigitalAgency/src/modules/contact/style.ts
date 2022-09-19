@@ -3,6 +3,8 @@ import { gapSizes, screenSizes } from "../../styles/theme";
 
 export const ContactWrapper = styled.div`
 background-color: #ecf2f6;
+position: relative;
+z-index: 1;
 `;
 
 export const ContactBody = styled.div`

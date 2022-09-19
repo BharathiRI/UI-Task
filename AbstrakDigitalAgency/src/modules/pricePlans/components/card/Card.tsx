@@ -26,7 +26,6 @@ export const Card = ({ title, subTitle, monthlyAmount, yearlyAmount,amountPlan, 
         </Styled.PriceBox>
         <Button
                 size="23px 55px"
-                largeSize="23px 55px"
                 color="#27272e"
                 bgColor="transparent"
                 hoverBgColor='#ffdc60'

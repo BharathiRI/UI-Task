@@ -1,5 +1,6 @@
 import { Button } from '../../shared/button/Button'
 import { getImageUrl } from '../../shared/helpers/util'
+import { BackgroundLayer } from './components/backgroundLayer/BackgroundLayer'
 import * as Styled from './style'
 
 export const Banner = () => {
@@ -29,15 +30,21 @@ export const Banner = () => {
       <Styled.BannerRight>
         <Styled.AnimatedBox2>
             <Styled.ImageBox1>
-                <Styled.Image width="100%" src={`${getImageUrl}/banner/window.png`} alt="" />
+                <Styled.Image src={`${getImageUrl}/banner/window.png`} alt="" />
             </Styled.ImageBox1>
         </Styled.AnimatedBox2> 
         <Styled.AnimatedBox3>
-            <Styled.ImageBox1>
-                <Styled.Image width="80%" src={`${getImageUrl}/banner/laptop-poses.png`} alt="" />
-            </Styled.ImageBox1>
+            <Styled.ImageBox2>
+                <Styled.Image src={`${getImageUrl}/banner/laptop-poses.png`} alt="" />
+            </Styled.ImageBox2>
         </Styled.AnimatedBox3> 
+        <Styled.ImageBox3>
+        <Styled.AnimatedBox4>
+                <Styled.Image src={`${getImageUrl}/banner/chat-group.png`} alt="" />
+        </Styled.AnimatedBox4> 
+        </Styled.ImageBox3>
       </Styled.BannerRight>
+    <BackgroundLayer/>
     </Styled.BannerBody>
     </Styled.BannerWrapper>
   )

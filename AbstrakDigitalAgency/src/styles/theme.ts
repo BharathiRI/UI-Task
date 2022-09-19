@@ -123,6 +123,7 @@ export const colors: Colors = {
 
 export interface Theme {
   [propName: string]: string | ThemeWithStates | { [propName: string]: ThemeWithStates } | undefined
+  mainBgColor: string
   primary: string
   secondary: string
   gray: string
@@ -189,7 +190,8 @@ export interface Theme {
   button: { [propName: string]: ThemeWithStates }
 }
 
-export const basicTheme: Theme = {
+export const darkTheme: Theme = {
+  mainBgColor : "#333",
   primary: rgba('#FFF', 0.05),
   secondary: colors.lightNavy,
   accent: colors.green,
@@ -279,6 +281,7 @@ export const basicTheme: Theme = {
 }
 
 export const lightTheme: Theme = {
+  mainBgColor : "#fff",
   primary: rgba('#f2f2f2', 1),
   secondary: rgba('#f2f2f2', 1),
   accent: colors.green,
@@ -369,17 +372,17 @@ export const lightTheme: Theme = {
 }
 
 export enum Themes {
-  BASIC,
+  DARK,
   LIGHT,
 }
 
 export const getTheme = (theme: Themes) => {
   switch (theme) {
-    case Themes.BASIC:
-      return basicTheme
+    case Themes.DARK:
+      return darkTheme
     case Themes.LIGHT:
       return lightTheme
     default:
-      return basicTheme
+      return lightTheme
   }
 }

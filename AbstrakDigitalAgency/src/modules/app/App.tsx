@@ -5,7 +5,19 @@ import { getTheme, Themes } from '../../styles/theme'
 import { GlobalStyle } from '../../styles/globalStyle'
 
 export const App = () => {
-  const currentTheme = { ...getTheme(Themes.BASIC), selected: Themes.BASIC }
+  const currentTheme = ()=>{
+    let changeTheme: any
+    const Theme = localStorage.getItem("currentTheme");
+    if(!Theme){
+      localStorage.setItem('lightTheme',currentTheme)
+    }
+    if(Theme === "lightTheme"){
+        changeTheme = Themes.DARK
+    }else{
+        changeTheme = Themes.LIGHT
+    }
+    return { ...getTheme(changeTheme), selected: changeTheme }
+  }
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyle />

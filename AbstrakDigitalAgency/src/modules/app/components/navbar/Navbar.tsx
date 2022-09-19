@@ -1,4 +1,4 @@
-import {  useState } from 'react'
+import { useState } from 'react'
 import { DropDown } from '../../../../shared/dropdown/DropDown'
 import { getImageUrl } from '../../../../shared/helpers/util'
 import Dark from '../../../../assets/images/icons/dark.svg'
@@ -7,6 +7,7 @@ import * as Styled from './style'
 import { SideNav } from './sideNav/SideNav'
 import { MobileNav } from './mobileNav/MobileNav'
 import { useScreenSize } from '../../../../shared/hooks/useScreenSize'
+import { getTheme, Themes } from '../../../../styles/theme'
 
 export const ListArray = [
   {
@@ -37,6 +38,7 @@ export const ListArray = [
 ]
 
 
+
 interface IProps{
   expand: boolean,
   setExpand: any;
@@ -45,12 +47,30 @@ interface IProps{
 export const Navbar = ({expand,setExpand}:IProps) => {
 
   const [dark,setDark] = useState<boolean>(false);
-  
-  const {matches:currentScreenWidth, height:currentScreenHeight} = useScreenSize();
 
+  const {matches:currentScreenSize,height:currentScreenHeight} = useScreenSize();
+  // const {isStick,isMobile} = useScreenSize();
+
+  console.log({currentScreenSize,currentScreenHeight});
+  
+
+  const switchTheme = () =>{
+    let changeLocalTheme: string;
+
+    const Theme = localStorage.getItem("currentTheme");
+    if(Theme === "lightTheme"){
+        changeLocalTheme = "darkTheme";
+    }else{
+        changeLocalTheme = "lightTheme";
+    }
+    localStorage.setItem('currentTheme',changeLocalTheme)
+    setDark(!dark)
+  }
+    
   return (
     <>
-    <Styled.NavbarBody sticky={currentScreenHeight>360?true:false}>
+    <Styled.NavbarBody sticky={currentScreenHeight>=500?true:false}>
+    {/* <Styled.NavbarBody sticky={isStick}> */}
       <Styled.NavbarContainer>
         <Styled.NavbarLeft>
           {/* <Styled.Image src={`${getImageUrl}/logo-3.svg`} alt="" />  */}
@@ -68,7 +88,7 @@ export const Navbar = ({expand,setExpand}:IProps) => {
                 <Styled.Span></Styled.Span>
                </Styled.ActionButton>
                <Styled.ActionButton bgColor="#5956e9">
-               <Styled.Span2 onClick={()=>setDark(!dark)}>
+               <Styled.Span2 onClick={()=>switchTheme()}>
                 <Styled.ThemeImage src={dark ? Light : Dark} alt="img" />
                 </Styled.Span2>
                </Styled.ActionButton>
@@ -77,8 +97,12 @@ export const Navbar = ({expand,setExpand}:IProps) => {
         </Styled.NavbarRight>
       </Styled.NavbarContainer>
     </Styled.NavbarBody>
-    {((currentScreenWidth <= 992) && expand) && <MobileNav expand={expand} setExpand={setExpand} /> }
-    {(currentScreenWidth > 992) && <SideNav expand={expand} setExpand={setExpand} /> }
+    {(currentScreenSize < 1024 && expand) && <MobileNav expand={expand} setExpand={setExpand} /> }
+    { currentScreenSize >= 1024&& <SideNav expand={expand} setExpand={setExpand} /> }
+{/* {(isMobile && expand) && <MobileNav expand={expand} setExpand={setExpand} /> }
+    { !isMobile && <SideNav expand={expand} setExpand={setExpand} /> } */}
+
     </>
+  
   )
 }

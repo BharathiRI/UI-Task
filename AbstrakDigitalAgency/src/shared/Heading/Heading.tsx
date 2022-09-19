@@ -8,7 +8,6 @@ interface Iprops{
     subTitle?: string,
     subTitle2? : string,
     colors: string,
-    break?: string,
     width?: string,
     subColor?: string;
 }
