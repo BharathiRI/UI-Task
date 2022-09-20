@@ -2,6 +2,10 @@ import { Button } from "../../../shared/button/Button"
 import { Input } from "../../../shared/input/Input"
 import * as Styled from './style'
 
+/**
+ * @returns Contact form
+ */
+
 export const Form = () => {
   return (
     <Styled.Form>

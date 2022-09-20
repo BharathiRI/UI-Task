@@ -2,7 +2,6 @@ import { createGlobalStyle, ThemeProps, css } from 'styled-components'
 import { fontSizes, gapSizes, screenSizes, Theme } from './theme'
 import HelveticaSans from '../assets/fonts/Helvetica/HelveticaSans.ttf';
 import HelveticaSansBold from '../assets/fonts/Helvetica/HelveticaSansBold.ttf'
-import HelveticaNeueBold from '../assets/fonts/Helvetica/HelveticaNeue.ttf'
 
 
 import { rgba } from 'polished'
@@ -31,10 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: HelveticaSansBold;
     src: url(${HelveticaSansBold});
   } 
-  @font-face {
-    font-family: HelveticaNeueBold;
-    src: url(${HelveticaNeueBold});
-  } 
+ 
 
   address, blockquote, h1, h2, h3, h4, h5, h6, hr, p, pre, table {
     margin: 0 0 30px;

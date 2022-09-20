@@ -1,12 +1,18 @@
-import * as Styled from './style';
+import * as Styled from './style'
 
-interface Iprops{
-    labelText: string;
-     type: string;
-     placeholder: string;
+interface Iprops {
+  labelText: string
+  type: string
+  placeholder: string
 }
 
-export const Input= ({labelText,type,placeholder}: Iprops) => {
+/**
+ *
+ * @param params We can customize that by using it
+ * @returns Input field
+ */
+
+export const Input = ({ labelText, type, placeholder }: Iprops) => {
   return (
     <Styled.InputWrapper>
       <Styled.Label>{labelText}</Styled.Label>

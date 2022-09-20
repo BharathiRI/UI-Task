@@ -46,21 +46,12 @@ function getRouteRenderWithAuth(isLoggedIn: boolean, route: RouteDefinition) {
     const RouteComponent = route.requires ? route.requires(route.element) : route.element
     return { element: <RouteComponent /> }
   } else {
-    // return (routeProps: any) => {
-    // const from = route.redirect == '/login' ? `?from=${routeProps.match.url}` : ''
     return { element: <Navigate replace to={route.redirect} /> }
-    // }
   }
 }
 
 export const RoutesComponent: React.FC<Props & RoutesProps> = () => {
-  // const { user } = props
   const isLoggedIn = false
-
-  // userIsLoggedIn(user) && userIsEmailVerified(user)
-  // if (!props.initialLoad) {
-  //   return <Loading />
-  // }
 
   const mapRoutes = (route: RouteDefinition, i: number) => {
     const render = getRouteRenderWithAuth(isLoggedIn, route)

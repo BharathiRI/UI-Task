@@ -1,10 +1,8 @@
 import styled from 'styled-components'
 import { screenSizes } from '../../../../styles/theme'
-import { movingleftright1,movingleftright2,movingleftright3 } from '../../../../styles/styled'
+import { movingleftright1, movingleftright2, movingleftright3 } from '../../../../styles/styled'
 
-
-export const BackgroundLayer = styled.div`
-`
+export const BackgroundLayer = styled.div``
 
 export const ShapeOne = styled.div`
   top: 0;

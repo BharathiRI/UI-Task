@@ -10,6 +10,11 @@ import vimeo from '../../../../assets/images/icons/vimeo.svg'
 import MailBox from '../../../../assets/images/icons/mail.svg'
 import { Button } from '../../../../shared/button/Button'
 
+/**
+ *
+ * @returns Footer
+ */
+
 export const Footer = () => {
   const iconArray = [fb, behance, dribble, instagram, linkedIn, pinInterest, twitter, vimeo]
   const servicesArray = ['Design', 'Development', 'Online Marketing', 'Business', 'Technology', 'Content Strategy']
@@ -23,7 +28,7 @@ export const Footer = () => {
           <Styled.IconBox>
             {iconArray?.map((icon: any, index: number) => (
               <Styled.Icon key={index}>
-                <Styled.IconImage src={icon} alt="img" className='svg'/>
+                <Styled.IconImage src={icon} alt="img" className="svg" />
               </Styled.Icon>
             ))}
           </Styled.IconBox>
@@ -44,8 +49,8 @@ export const Footer = () => {
                 size="14px 30px"
                 color="#fff"
                 bgColor="#5956e9"
-                hoverBgColor='#2522ba'
-                hoverColor='#fff'
+                hoverBgColor="#2522ba"
+                hoverColor="#fff"
                 border="none"
                 buttonText="Subscribe"
               />
@@ -66,9 +71,9 @@ export const Footer = () => {
             </Styled.ListBox>
             <Styled.ListBox>
               <Styled.ListHeading>Support</Styled.ListHeading>
-                {supportsArray.map((support: string, index: number) => (
-                  <Styled.List key={index}>{support}</Styled.List>
-                ))}
+              {supportsArray.map((support: string, index: number) => (
+                <Styled.List key={index}>{support}</Styled.List>
+              ))}
             </Styled.ListBox>
           </Styled.FooterCenterRight>
         </Styled.FooterCenter>

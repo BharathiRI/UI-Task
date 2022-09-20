@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { slide, slideInLeft, slideInRight } from "../../../../../styles/styled";
 import { screenSizes } from "../../../../../styles/theme";
 
 interface IProps{
@@ -74,7 +73,6 @@ export const Input = styled.input`
     border-bottom: 2px solid #999ab8;
     border-radius: 0;
     padding: 5px 0;
-}
 `;
 
 export const MainBox = styled.div`

@@ -2,8 +2,7 @@ import styled from 'styled-components'
 interface IProps {
   expand: boolean
 }
-export const HomeBody = styled.div`
-`
+export const HomeBody = styled.div``
 export const FadeLayer = styled.div<IProps>`
   position: fixed;
   top: 0;

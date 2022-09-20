@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import { gapSizes, screenSizes } from '../../../../styles/theme'
 
 export const CardContentText = styled.p`
- opacity: 0.5;
+  opacity: 0.5;
 `
 export const CardLinkText = styled.p`
-    font-weight: 500;
+  font-weight: 500;
 `
 export const ServiceCard = styled.div`
  padding: 40px 25px;
  display: grid;
  grid-template-columns: 3fr 9fr;
- column-gap:${gapSizes.L}
+ column-gap:${gapSizes.L};
  border:1px solid white;
  border-radius: 30px;
  transition: all 0.3s ease-in-out;
@@ -35,29 +35,28 @@ export const ServiceCard = styled.div`
 }
 `
 export const CardLeft = styled.div`
-    margin-right: ${gapSizes.S};
- `
+  margin-right: ${gapSizes.S};
+`
 export const CardRight = styled.div`
- display:grid;
- grid-template-rows: repeat(3,auto);
- align-items: start;
-`;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  align-items: start;
+`
 
-export const CardTitle = styled.div``;
+export const CardTitle = styled.div``
 
 export const CardContent = styled.div`
-margin-bottom:30px;
-`;
+  margin-bottom: 30px;
+`
 
 export const CardLink = styled.div`
-cursor: pointer;
-span {
+  cursor: pointer;
+  span {
     margin-right: ${gapSizes.S};
-}
-`;
+  }
+`
 
 export const CardTitleText = styled.h5`
- color: #fff;
+  color: #fff;
 `
-export const CardImage = styled.img`
-`
+export const CardImage = styled.img``

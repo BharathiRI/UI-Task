@@ -4,6 +4,10 @@ import { Card } from './components/card/Card'
 import { BackgroundLayer } from './components/backgroundLayer/BackgroundLayer'
 import * as Styled from './style'
 
+/**
+ *
+ * @returns Clients section
+ */
 
 export const Clients = () => {
   const cardArray = [
@@ -43,23 +47,23 @@ export const Clients = () => {
 
   return (
     <Styled.CardWrapper>
-    <Styled.ClientsBody>
-       <Heading
-          width= "60%"
+      <Styled.ClientsBody>
+        <Heading
+          width="60%"
           align="left"
           colors="#fff"
           subColor="#fff"
           title="Top Clients"
           mainTitle="We’ve built solutions for..."
           subTitle="Design anything from simple icons to fully featured websites and applications."
-         />
-      <Styled.CardContainer>
-        {cardArray?.map((card) => {
-          return <Card key={card.id} image={card.image}  />
-        })}
-      </Styled.CardContainer>
-    </Styled.ClientsBody>
-    <BackgroundLayer/>
+        />
+        <Styled.CardContainer>
+          {cardArray?.map((card) => {
+            return <Card key={card.id} image={card.image} />
+          })}
+        </Styled.CardContainer>
+      </Styled.ClientsBody>
+      <BackgroundLayer />
     </Styled.CardWrapper>
   )
 }

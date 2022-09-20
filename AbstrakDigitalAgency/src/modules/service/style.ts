@@ -1,52 +1,47 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import { screenSizes } from '../../styles/theme'
 
 export const CardWrapper = styled.div`
-background-color: #27272e;
-position: relative;
-z-index: 1;
-`;
+  background-color: #27272e;
+  position: relative;
+  z-index: 1;
+`
 
 export const ServiceBody = styled.div`
- display: grid;
- grid-template-rows: repeat(2,auto);
- padding: 60px 15px 20px;
- max-width: 540px;
- margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  padding: 60px 15px 20px;
+  max-width: 540px;
+  margin: 0 auto;
 
-@media only screen and (min-width: ${screenSizes.S}px)
- {
+  @media only screen and (min-width: ${screenSizes.S}px) {
     max-width: 720px;
     padding: 80px 15px 40px;
-}
-@media only screen and (min-width: ${screenSizes.M}px)
-{
+  }
+  @media only screen and (min-width: ${screenSizes.M}px) {
     max-width: 960px;
-    padding: 100px 15px 60px
-}
-@media only screen and (min-width: ${screenSizes.XL}px)
-{
-  max-width: 1140px;
-  padding: 140px 15px 100px
-}
-@media only screen and (min-width: ${screenSizes.XXL}px)
-{
+    padding: 100px 15px 60px;
+  }
+  @media only screen and (min-width: ${screenSizes.XL}px) {
+    max-width: 1140px;
+    padding: 140px 15px 100px;
+  }
+  @media only screen and (min-width: ${screenSizes.XXL}px) {
     max-width: 1320px;
-}
-
-`;
+  }
+`
 
 export const HeadingContainer = styled.div`
- display: grid;
- grid-template-rows: repeat(3,auto);
-`;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+`
 
 export const CardContainer = styled.div`
- display: grid;
- grid-template-columns: repeat(1,fr);
- margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, fr);
+  margin: 0 auto;
 
- @media (min-width: ${screenSizes.S}px) {
+  @media (min-width: ${screenSizes.S}px) {
     grid-gap: 25px;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -54,4 +49,4 @@ export const CardContainer = styled.div`
     grid-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
   }
-`;
+`

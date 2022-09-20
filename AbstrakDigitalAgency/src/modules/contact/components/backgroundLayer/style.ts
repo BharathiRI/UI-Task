@@ -9,10 +9,9 @@ export const ShapeOne = styled.div`
   position: absolute;
   z-index: -1;
   width: 80%;
-  @media (min-width: ${screenSizes.S})
- {
-  width: 100%;
-}
+  @media (min-width: ${screenSizes.S}) {
+    width: 100%;
+  }
 `
 
 export const ShapeTwo = styled.div`

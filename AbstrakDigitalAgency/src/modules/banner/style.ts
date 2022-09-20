@@ -3,10 +3,9 @@ import { fadeInUp, slideInLeft, slideInRight, zoomIn } from '../../styles/styled
 import { screenSizes } from '../../styles/theme'
 
 export const BannerWrapper = styled.div`
- position: relative;
- z-index: 1;
- min-height: 100%;
- 
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
 `
 
 export const BannerBody = styled.div`
@@ -72,8 +71,7 @@ export const BannerHeading = styled.h1`
   }
 `
 
-export const BannerContent = styled.p`
-`
+export const BannerContent = styled.p``
 
 export const BannerRight = styled.div`
   position: relative;
@@ -118,5 +116,3 @@ export const ImageBox3 = styled.div`
 `
 
 export const Image = styled.img``
-
-
